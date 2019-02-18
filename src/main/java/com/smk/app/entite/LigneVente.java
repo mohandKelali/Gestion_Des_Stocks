@@ -27,7 +27,7 @@ public class LigneVente implements Serializable{
 	public LigneVente() {
 	
 	}
-	
+	 
 	/****************************************Les getters et setters****************************************/
 	
 	public Long getIdLigneVente() {
