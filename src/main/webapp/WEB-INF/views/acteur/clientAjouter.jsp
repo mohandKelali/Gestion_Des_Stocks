@@ -198,66 +198,50 @@
 
         </nav>
         <!-- End of Topbar -->
-
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
-
-          <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Clients</h1>
-          
-
-          <!-- DataTales -->
-          <div class="card shadow mb-4">
-            <div class="card-header py-3 ">
-              <ol class="breadcrumb">
-				
-				  <li class="breadcrumb-item"><a href="http://localhost:8080/app/client/ajouter"><i class="fa fa-plus"></i> &nbsp; Ajouter un élément</a></li>
-				 
-			  </ol>
-	         </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>Photo</th>
-                      <th>Nom</th>
-                      <th>Prénom</th>
-                      <th>Email</th>
-                      <th>Adresse</th>
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
-                
-                  <tbody>
+			<h3>Ajouter un Client</h3>
+			
+			<br/>
+        <!-- Begin Form Content -->
+	
+			
+		    <form method="post" action="/app/client/enregistrer" enctype="multipart/form-data" class="user">
                     
-                    <c:forEach items="${clients}" var="client">
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="nom"  placeholder="Entrer le nom du client" required />
+                    	<br/>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="prenom" placeholder="Entrer le prénom du client" required />
+                    	 <br/>
+                    </div>
                     
-                    	<td class="center"><img src="${client.getPhoto()}" width="50px" height="50px"/></td>
-                      	<td>${client.getNom()}</td>
-                      	<td>${client.getPrenom()}</td>
-                      	<td>${client.getMail()}</td>
-                      	<td>${client.getAdresse()}</td>
-                      	<td>
-							<ol class="breadcrumb">
-				
-				  			 	<li class="breadcrumb-item"><a href="#"><i class="fa fa-edit"></i></a></li>
-				 		  		<li class="breadcrumb-item"><a href="#"><i class="fa fa-trash"></i></a></li>
-				 		  	
-				 			</ol>
+                     <div class="form-group">
+                      <input type="email" class="form-control form-control-user" name="mail" placeholder="Entrer le mail du client" required />
+                    	 <br/>
+                    </div>
+                    
+                     <div class="form-group">
+                      <input  type="text" class="form-control form-control-user" name="adresse" placeholder="Entrer l'adresse du client" required />
+                    	 <br/>
+                    </div>
+                                                                                       
+                     <div class="form-group center">
+                     	  &nbsp; &nbsp; &nbsp; &nbsp;<label for="photo">Photo</label> &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+   						 <input  type="file"  name="photo" id="photo" placeholder="Photo" required/>
+   						<br/>
+  					</div>
+                                                    
+                    <button type="submit"  class="btn btn-primary btn-user btn-block">Ajouter</button>
+                    <br/>
+                    <a href="http://localhost:8080/app/client" class="btn btn-danger btn-user btn-block">
+                      Annuler
+                    </a>
+ 
+                    <hr>
+                  
+            </form>
+	
 
-						</td>
-                    
-                    
-                    </c:forEach>
-                    
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-        </div>
         <!-- /.container-fluid -->
 
       </div>

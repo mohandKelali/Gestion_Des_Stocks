@@ -1,6 +1,6 @@
 <%@ include file="/WEB-INF/views/include/include.jsp"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
 
@@ -10,9 +10,9 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-    <link rel="icon" href="<%=request.getContextPath()%>/resources/icon.png" />
+  <link rel="icon" href="<%=request.getContextPath()%>/resources/icon.png" />
 
-  <title>GKELALI Login</title>
+  <title>GKELALI Accueil</title>
 
   <!-- Custom fonts for this template-->
   <link href="<%=request.getContextPath()%>/resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -32,7 +32,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<%=request.getContextPath()%>/resources/index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="http://localhost:8080/app/accueil">
         
         <div class="sidebar-brand-text mx-3">ETS KELALI STOCKS</div>
         
@@ -211,7 +211,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
+            <span>Copyright &copy; ETS KELALI STOCKS 2019</span>
           </div>
         </div>
       </footer>
@@ -233,15 +233,15 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Prêt à partir?</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-body">Sélectionnez "Déconnexion" ci-dessous si vous êtes prêt à mettre fin à votre session en cours.</div>
         <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="<%=request.getContextPath()%>/resources/login.html">Logout</a>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Annuler</button>
+          <a class="btn btn-primary" href="<%=request.getContextPath()%>/resources/login.html">Déconnexion</a>
         </div>
       </div>
     </div>
